@@ -1,6 +1,3 @@
-# Requirements for Fire Detection API - Render.com
-# Python 3.9+
-
 Flask==2.3.3
 tensorflow==2.15.0
 numpy==1.24.3
