@@ -1,0 +1,52 @@
+{
+  "model_name": "fire_smoke_detection_model",
+  "architecture": "MobileNetV2",
+  "version": "2.0",
+  "dataset": "FIRE-SMOKE-DATASET",
+  "created_at": "2026-01-02 04:48:47",
+  "training": {
+    "epochs_completed": 30,
+    "training_time_seconds": 1273,
+    "best_epoch": 29,
+    "training_samples": 2700,
+    "validation_samples": 300
+  },
+  "performance": {
+    "test_accuracy": 0.9333333373069763,
+    "test_loss": 0.5064613819122314,
+    "test_precision": 0.9324324131011963,
+    "test_recall": 0.9200000166893005,
+    "best_val_accuracy": 0.9333333373069763,
+    "train_val_gap": -0.0448148250579834,
+    "rating": "EXCELLENT"
+  },
+  "model_specs": {
+    "input_shape": [
+      224,
+      224,
+      3
+    ],
+    "output_classes": 3,
+    "class_names": [
+      "Fire",
+      "Neutral",
+      "Smoke"
+    ],
+    "class_indices": {
+      "Fire": 0,
+      "Neutral": 1,
+      "Smoke": 2
+    }
+  },
+  "deployment": {
+    "platform": "Supabase + Render.com",
+    "framework": "TensorFlow/Keras",
+    "preprocessing": "Resize to 224x224, normalize to [0,1]",
+    "recommended_threshold": 0.7
+  },
+  "per_class_accuracy": {
+    "Fire": 89.0,
+    "Neutral": 95.0,
+    "Smoke": 96.0
+  }
+}
